@@ -1,5 +1,6 @@
 import { Box, Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 import Layout from "./Layout";
+import { Link } from "react-router-dom";
 
 const newProduct = [
   {
@@ -86,26 +87,28 @@ export default function Home() {
                   position={"relative"}
                   overflow={"hidden"}
                 >
-                  <Box
-                    position={"absolute"}
-                    top={0}
-                    left={0}
-                    w={"full"}
-                    h={"full"}
-                    bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
-                  >
-                    <Text
-                      color={"white"}
+                  <Link to={"/detail"}>
+                    <Box
                       position={"absolute"}
+                      top={0}
+                      left={0}
                       w={"full"}
-                      bottom={0}
-                      align={"center"}
-                      fontWeight={800}
-                      py={4}
+                      h={"full"}
+                      bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
                     >
-                      {product.text}
-                    </Text>
-                  </Box>
+                      <Text
+                        color={"white"}
+                        position={"absolute"}
+                        w={"full"}
+                        bottom={0}
+                        align={"center"}
+                        fontWeight={800}
+                        py={4}
+                      >
+                        {product.text}
+                      </Text>
+                    </Box>
+                  </Link>
                 </GridItem>
               ))}
             </Grid>
@@ -128,26 +131,28 @@ export default function Home() {
                   backgroundPosition={"center center"}
                   position={"relative"}
                 >
-                  <Box
-                    position={"absolute"}
-                    top={0}
-                    left={0}
-                    w={"full"}
-                    h={"full"}
-                    bgGradient="linear(to-b, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4))"
-                  >
-                    <Text
+                  <Link to={"/detail"}>
+                    <Box
                       position={"absolute"}
-                      top={"50%"}
-                      left={"50%"}
-                      transform={"translate(-50%, -50%)"}
-                      fontWeight={600}
-                      fontSize={24}
-                      color={"black"}
+                      top={0}
+                      left={0}
+                      w={"full"}
+                      h={"full"}
+                      bgGradient="linear(to-b, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4))"
                     >
-                      {item.text}
-                    </Text>
-                  </Box>
+                      <Text
+                        position={"absolute"}
+                        top={"50%"}
+                        left={"50%"}
+                        transform={"translate(-50%, -50%)"}
+                        fontWeight={600}
+                        fontSize={24}
+                        color={"black"}
+                      >
+                        {item.text}
+                      </Text>
+                    </Box>
+                  </Link>
                 </GridItem>
               ))}
             </Grid>
