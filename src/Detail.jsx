@@ -1,3 +1,4 @@
+import KakaoMap from "./KakaoMap";
 import Layout from "./Layout";
 import { Box, Image, Text, VStack } from "@chakra-ui/react";
 
@@ -40,7 +41,7 @@ export default function Detail() {
           </Text>
         </VStack>
         {/** 카카오 맵 불러오기 */}
-        <Detail />
+        <KakaoMap />
       </VStack>
     </Layout>
   );
